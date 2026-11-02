@@ -1,0 +1,24 @@
+{
+  "exe": "<p100-strata>/strata/build-p100/strata",
+  "args": [
+    "--pack", "<models>/packs/iq3_xxs",
+    "--native", "<models>/models/IQ3_XXS/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00001-of-00002.gguf",
+    "--ple-gguf", "<models>/models/IQ3_XXS/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00002-of-00002.gguf",
+    "--ple-io", "ram",
+    "--expert-profile", "<strata-terminal>/data/expert-profile.bin",
+    "--expert-cache", "auto", "--prefill", "auto",
+    "--spec", "4", "--spec-min-p", "0.5", "--mtp", "<models>/mtp/rt",
+    "--max-context", "65536", "--kv", "int8", "--kv-resident", "32768",
+    "--vram-reserve-later-mib", "1103", "--peer-device", "1", "--peer-reserve-mib", "2000"
+  ],
+  "gpu": [0, 1],
+  "layer_split": "auto",
+  "cwd": "<p100-strata>/strata",
+  "tokenizer": "<models>/packs/iq3_xxs/tokenizer",
+  "model_name": "qwen3.8-flash-next-iq3_xxs",
+  "log": "<logs>/engine.log",
+  "host": "127.0.0.1",
+  "port": 8096,
+  "env": {"STRATA_ROUTE_TAIL_SKIP": "0", "STRATA_Q8_SM60": "1", "STRATA_GU_F16": "2", "STRATA_SM60_D20_SUB": "1",
+          "STRATA_DOWN_F16": "1", "STRATA_B6_F16": "1"}
+}

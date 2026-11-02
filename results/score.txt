@@ -1,0 +1,6 @@
+llama/gen.jsonl gsm8k: 99/100 right, median decode 25.337484610530808 t/s
+llama/gen.jsonl hep: 78/80 right, median decode 26.670655669079785 t/s
+strata/gen.jsonl gsm8k: 97/100 right, median decode 74.9 t/s
+strata/gen.jsonl hep: 77/80 right, median decode 85.4 t/s
+gsm8k: right only in 1st: 2 [12, 45]; right only in 2nd: 0 []
+hep: right only in 1st: 1 [10]; right only in 2nd: 0 []
